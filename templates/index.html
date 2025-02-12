@@ -1,15 +1,22 @@
 <html>
     <head>
+        <link rel="stylesheet" href="static/main.css">
         <title>
             Cars
         </title>
+
     </head>
     <body>
-        <h1>Cars</h1>
+        <h1>Cool Ass Cars</h1>
         {% for car in cars %}
-        <ul>
-            {{ car.model_name }} {{ car.model_base_price }}
-        </ul>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h4 class="card-title">
+                <b>{{ car.model_name }}
+                </h4>
+                AU ${{ car.model_base_price }}</b>
+            </div>
+        </div>
         {% endfor %}
     </body>
 
