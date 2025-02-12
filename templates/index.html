@@ -1,21 +1,22 @@
 <html>
     <head>
+        <link rel="stylesheet" href="static/main.css">
         <title>
             Cars
         </title>
 
-        <style>
-            ul {
-                margin-left: 40px;
-            }
-        </style>
     </head>
     <body>
-        <h1 style="color:#31b7ff; text-align:center; margin-top:20px;">Cars</h1>
+        <h1>Cool Ass Cars</h1>
         {% for car in cars %}
-        <ul>
-            {{ car.model_name }} {{ car.model_base_price }}
-        </ul>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h4 class="card-title">
+                <b>{{ car.model_name }}
+                </h4>
+                AU ${{ car.model_base_price }}</b>
+            </div>
+        </div>
         {% endfor %}
     </body>
 
